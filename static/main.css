@@ -1,0 +1,121 @@
+/**********General Styles**********/
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background: #fff;
+    height:100%;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 60px;
+    position: fixed;
+    line-height: 1;
+}
+
+.clear { 
+    clear: both; 
+    height: 60px; 
+}
+
+
+/*******Styles for publicCategories.html, publicItems.html*******/
+
+.jumbotron {
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.card a {
+	color: #212529;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+/*******Styles for create new Category & edit category*******/
+/******Styles for create new item & edit item***************/
+
+.category-new-intro {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+/***********Styles for delete category page************/
+
+.form-area {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+/*********Styles for showItemInfo.html**********/
+
+.img-card {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    width: 450px;
+    height: 300px;
+    padding: 20px;
+}
+
+.item-info {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/**********Styles for login.html***********/
+.frame {
+    max-width: 280px;
+    padding: 15px;
+    margin: 5em auto;
+}
+
+.form-text {
+    font-size: 1.5em;
+}

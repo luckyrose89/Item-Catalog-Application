@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block container %}
+<h2 class="text-center category-new-intro">Create new Item</h2>
+<div class="container">
+	<form action="{{url_for('createNewItem', category_name=category.name)}}" class="form-signin" method="post">
+		<div class="form-group">
+			<label class="form-control-label">Name:</label>
+			<input class="form-control" type="text" name="name" required>
+		</div>
+		<div class="form-group">
+			<label class="form-control-label">Item Image URL:</label>
+			<input class="form-control" type="text" name="image" required>
+		</div>
+		<div class="form-group">
+			<label class="form-control-label">Item Price:</label>
+			<input class="form-control" type="text" name="price" required>
+		</div>
+		<div class="form-group">
+			<label class="form-control-label">Item Description</label>
+			<input class="form-control" type="text" name="description" required>
+		</div>
+		<input class="btn btn-lg btn-primary btn-block" type="submit" value="Create Item">
+	</form>
+</div>
+<div class="clear"></div>
+{% endblock %}

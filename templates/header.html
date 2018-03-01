@@ -1,0 +1,35 @@
+<header>
+	<div class="bg-dark collapse" id="navbarHeader">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-md-7 py-4">
+					<h4 class="text-white">Welcome!</h4>
+					<p class="text-muted">The cakery catalog allows you to create categories of your products. Each of these categories can then be used to create items that you want to feature in your catalog. These items and categories can be edited as well as deleted. To add, edit and delete content, please login</p>
+				</div>
+				<div class="col-sm-4 offset-md-1 py-4">
+				{% if 'username' not in session %}
+					<h4 class="text-white"><a href="{{url_for('showLogin')}}">Login</a></h4>
+				{% else %}
+					<h4 class="text-white"><a href="{{url_for('gdisconnect')}}">LogOut</a></h4>
+				{% endif %}
+					<ul class="list-unstyled">
+						{% for c in categories %}
+						<li><a class="text-white" href="{{url_for('showItems', category_id=c.id)}}">{{c.name}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="navbar navbar-dark bg-dark box-shadow">
+		<div class="container d-flex justify-content-between">
+			<a href="{{url_for('showCategories')}}" class="navbar-brand d-flex align-items-center">
+				<img src="{{ url_for('static', filename='sweet-cake-piece.png') }}" alt="logo" class="mr-2">
+				<strong class="mt-1">Cakery Catalog</strong>
+			</a>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>		
+		</div>		
+	</div>
+</header>

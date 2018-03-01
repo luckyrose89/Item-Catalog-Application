@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block container %}
+<div class="container text-center category-new-intro">
+	<h2>Delete {{item.name}}</h2>
+	<form action="{{url_for( 'deleteItem', category_id=category.id, item_name=item.name)}}" class="form-area" method="post">
+		<p>Do you want to delete {{item.name}} from {{category.name}}?</p>
+	    <input class="btn btn-lg btn-danger btn-block mt-5" type="submit" value="Delete Item">
+	</form>
+</div>
+{% endblock %}
